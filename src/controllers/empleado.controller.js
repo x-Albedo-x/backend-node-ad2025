@@ -17,7 +17,7 @@ export default{
  
     async update(req,res){
         try {
-            const result = await empleadoService.updateEmpleado(req.params.id)
+            const result = await empleadoService.updateEmpleado(req.params.id, req.body)
             res.status(201).json({
                 message: 'success',
                 result
